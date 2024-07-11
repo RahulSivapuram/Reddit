@@ -25,8 +25,8 @@
             <div class="comment-section">
                 <div class="comment-template" *ngFor="let i of comments">
                     <div class="comment-details">
-                        <h4>username</h4>
-                        <p>5 days ago</p>
+                        <h4>{{i.username}}</h4>
+                        <p>{{i.createdAt}}</p>
                     </div>
                     <p>{{i.body}}</p>
                 </div>

@@ -46,7 +46,6 @@ export class AuthenticationPageComponent implements OnInit {
   login() {
     if (this.authForm.valid) {
       this.accountService.signin(this.authForm.value).subscribe((e: any) => {
-        console.log(e);
         if (e.status == 'success') {
           localStorage.setItem('token', e.data[0].userToken);
           console.log(e.data[0].userToken);
