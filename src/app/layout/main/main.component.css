@@ -1,0 +1,7 @@
+.app-outer{
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    padding-top: 1rem;
+}

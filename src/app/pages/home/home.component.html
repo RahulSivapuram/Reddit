@@ -1,0 +1,10 @@
+<div class="home">
+    <div class="home-postslist">
+        <app-post *ngFor="let i of posts" [postTitle]="i.title" [postContent]="i.body" [postDate]="i.createdAt" [communityName]="i.subreddit"
+        [userDetail]="i.username" [postId]="i.id"></app-post>
+    </div>
+    <div class="home-cardslist">
+        <app-homecardpostcommunity></app-homecardpostcommunity>
+        <app-homecardbrowsecom></app-homecardbrowsecom>
+    </div>
+</div>

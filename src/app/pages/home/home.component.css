@@ -1,0 +1,19 @@
+.home{
+    display: flex;
+    flex-direction: row;
+    padding:1rem 1rem; 
+    width: 100%;
+    justify-content: space-evenly;
+}
+.home-postslist{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 50%;
+}
+.home-cardslist{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 20%;
+}

@@ -1,0 +1,20 @@
+<div class="post_card">
+    <div class="post_vote">
+        <img src="assets/svg/upward.svg" width="20rem" height="20rem">
+        <span class="votes">0</span>
+        <img src="assets/svg/downward.svg" width="20rem" height="20rem">
+    </div>
+    <div class="post_info">
+        <div class="one">
+            <p class="community_name">{{communityName}}<span class="puser_details">  . Posted by {{userDetail}}. {{postDate}}</span></p>
+        </div>
+        <div class="data">
+            {{postTitle}} <br>
+            {{postContent}}
+        </div>
+        <div class="buttons">
+            <div class="comments">comments({{commentsCount}})</div>
+            <div class="read_post" [routerLink]="['/main/view', postId]">READ POST</div>
+        </div>
+    </div>
+</div>

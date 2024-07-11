@@ -1,0 +1,17 @@
+<div class="create-community-page">
+    <form class="form-area" [formGroup]="communityForm" (ngSubmit)="post()">
+        <h3>Create Community</h3>
+        <div class="textfield">
+            <input type="text" name="" placeholder="Title" formControlName="title"/>
+        </div>
+        <textarea name="description" cols="10" rows="5" placeholder="Description" formControlName="description"></textarea>
+        <div class="discard-post">
+            <button class="discard-button" type="reset">DISCARD</button>
+            <button class="post-button" type="submit">POST</button>
+        </div>
+    </form>
+    <div class="home-cardslist">
+        <app-homecardpostcommunity></app-homecardpostcommunity>s
+        <app-homecardbrowsecom></app-homecardbrowsecom>
+    </div>
+</div>

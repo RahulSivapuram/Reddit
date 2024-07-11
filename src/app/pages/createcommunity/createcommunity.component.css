@@ -1,0 +1,58 @@
+.create-community-page{
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.form-area{
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+    width: 70%;
+    border: 1px solid white;
+}
+.textfield{
+    width: 100%;
+    height: 2rem;
+    background-color: white;
+}
+.discard-post{
+   display: flex;
+   flex-direction: row;
+   gap: .25rem; 
+}
+.discard-button{
+    width: 50%;
+    height: 2rem;
+    border: 1px solid rgb(17, 45, 227);
+    text-align: center;
+    color: rgb(17, 45, 227);
+}
+.post-button{
+    width: 50%;
+    height: 2rem;
+    text-align: center;
+    background-color: rgb(17, 45, 227);
+    color: white;
+    border: none;
+}
+
+h3{
+    color: white;
+    font-weight: bold;
+}
+input{
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+input:focus{
+    outline: none;
+}
+.home-cardslist{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

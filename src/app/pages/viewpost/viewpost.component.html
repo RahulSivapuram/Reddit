@@ -1,0 +1,41 @@
+<div class="view-post">
+    <div class="postdetails">
+        <div class="vote-up-down">
+            <img src="assets/svg/upward.svg" width="20rem" height="20rem">
+            <span class="votes" style="color: white;">0</span>
+            <img src="assets/svg/downward.svg" width="20rem" height="20rem">
+        </div>
+        <div class="post-comments-read">
+            <div class="post-data">
+                <p class="community_name">/r/{{posts[0].title}}<span class="puser_details">. Posted by
+                        {{posts[0].username}}
+                        .{{posts[0].createdAt}}</span></p>
+
+                <h2>{{posts[0].title}}</h2>
+                <h3>{{posts[0].body}}</h3>
+
+                <p>Comment as <span>rahul</span></p>
+                <form [formGroup]="commentForm" (ngSubmit)="submit()">
+                    <textarea name="comment-info" id="comment-info" placeholder="Your Thoughts?" cols="90"
+                        class="comment-area" formControlName="body"></textarea>
+                    <button class="comments-button" type="submit">COMMENT</button>
+                </form>
+            </div>
+
+            <div class="comment-section">
+                <div class="comment-template" *ngFor="let i of comments">
+                    <div class="comment-details">
+                        <h4>username</h4>
+                        <p>5 days ago</p>
+                    </div>
+                    <p>{{i.body}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-cardslist">
+        <app-homecardpostcommunity></app-homecardpostcommunity>
+        <app-homecardbrowsecom></app-homecardbrowsecom>
+    </div>
+</div>

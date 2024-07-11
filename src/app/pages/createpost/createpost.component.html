@@ -1,0 +1,26 @@
+<div class="create-post-page">
+    <form class="form-area" [formGroup]="postForm" (ngSubmit)="post()">
+        <h3>Create Post</h3>
+        <div class="textfield">
+            <input type="text" placeholder="Title" formControlName="title"/>
+        </div>
+        <div class="textfield">
+            <input type="text" placeholder="URL" formControlName="url"/>
+        </div>
+        <div class="textfield">
+            <select name="subreddits" formControlName="subredditId">
+                <option >community</option>
+                <option *ngFor="let subreddit of redditsList" [value]="subreddit.id">{{subreddit.title}}</option>
+            </select>
+        </div>
+        <textarea name="description" cols="10" rows="10" placeholder="Description" formControlName="body"></textarea>
+        <div class="discard-post">
+            <button class="discard-button" type="reset">DISCARD</button>
+            <button class="post-button" type="submit">POST</button>
+        </div>
+    </form>
+    <div class="home-cardslist">
+        <app-homecardpostcommunity></app-homecardpostcommunity>
+        <app-homecardbrowsecom></app-homecardbrowsecom>
+    </div>
+</div>
