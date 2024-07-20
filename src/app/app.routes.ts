@@ -1,10 +1,11 @@
-import { Routes,RouterModule } from '@angular/router';
+  import { Routes,RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ViewpostComponent } from './pages/viewpost/viewpost.component';
 import { CreatecommunityComponent } from './pages/createcommunity/createcommunity.component';
 import { CreatepostComponent } from './pages/createpost/createpost.component';
 import { MainComponent } from './layout/main/main.component';
 import { AuthenticationPageComponent } from './pages/authentication-page/authentication-page.component';
+import { AuthguardService } from './core/guards/auth-guard.guard';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'signin',pathMatch:'full'},
@@ -12,6 +13,7 @@ export const routes: Routes = [
     { path: 'signup', component: AuthenticationPageComponent },
     {
       path: 'main',
+      canActivate:[AuthguardService.canActivate],
       component: MainComponent,
       children: [
         {path:'home',component:HomeComponent},

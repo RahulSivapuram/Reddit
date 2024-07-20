@@ -1,0 +1,41 @@
+.navbar{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-left,.navbar-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: inherit;
+    width: 15%;
+}
+.navbar-left h2{
+    cursor: pointer;
+}
+.login-button{
+    border: 2px solid orangered;
+    background-color: white;
+    color: orangered;
+    height: 2rem;
+    font-weight: bold;
+    width: 5rem;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+.signup-button{
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+    border: none;
+    height: 2rem;
+    font-weight: bold;
+    width: 5rem;
+    border-radius: .2rem;
+}
+h2{
+    color: white;
+    font-weight: bold;
+}

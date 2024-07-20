@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "/main",
+    "/main/community/add",
+    "/main/home",
+    "/main/post/add",
+    "/signin",
+    "/signup"
+  ]
+}

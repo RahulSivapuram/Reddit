@@ -13,12 +13,17 @@ export class AccountService {
   signin(data:any){
     return this.http.post(`${this.API_URL}/Account/login`,data);
   }
+  
   signup(data:any){
     return this.http.post(`${this.API_URL}/Account/register`,data);
   }
+
   getTokenDetails():any{
-    console.log(jwtDecode(localStorage.getItem('token')!));
     let res:any= jwtDecode(localStorage.getItem('token')!);
     return Number(res["Id"]);
+  }
+
+  authenticationStatus(){
+    return localStorage.getItem('token')!=null;
   }
 }

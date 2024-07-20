@@ -7,10 +7,10 @@
         </div>
         <div class="post-comments-read">
             <div class="post-data">
-                <p class="community_name">/r/{{posts[0].title}}<span class="puser_details">. Posted by
+                <p class="community_name">/r/{{posts[0].subreddit}}<span class="puser_details">. Posted by
                         {{posts[0].username}}
                         .{{posts[0].createdAt}}</span></p>
-
+                
                 <h2>{{posts[0].title}}</h2>
                 <h3>{{posts[0].body}}</h3>
 
@@ -21,7 +21,9 @@
                     <button class="comments-button" type="submit">COMMENT</button>
                 </form>
             </div>
-
+            <div class="image-area">
+                <img [src]="posts[0].url" class="post-image">
+            </div>
             <div class="comment-section">
                 <div class="comment-template" *ngFor="let i of comments">
                     <div class="comment-details">

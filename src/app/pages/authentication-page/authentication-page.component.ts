@@ -20,6 +20,7 @@ export class AuthenticationPageComponent implements OnInit {
   buttonHeading!: string;
   optionHeading!: string;
   authForm!: FormGroup;
+  routeName!:string;
   constructor(private router: Router, private accountService: AccountService) {}
 
   ngOnInit() {
@@ -28,10 +29,12 @@ export class AuthenticationPageComponent implements OnInit {
       this.formHeading = 'SIGN IN';
       this.buttonHeading = 'Login';
       this.optionHeading = 'Signup';
+      this.routeName ="signin";
     } else {
       this.formHeading = 'SIGN UP';
       this.buttonHeading = 'Register';
       this.optionHeading = 'Signin';
+      this.routeName ="signup";
     }
   }
 
@@ -48,8 +51,6 @@ export class AuthenticationPageComponent implements OnInit {
       this.accountService.signin(this.authForm.value).subscribe((e: any) => {
         if (e.status == 'success') {
           localStorage.setItem('token', e.data[0].userToken);
-          console.log(e.data[0].userToken);
-          console.log('success');
           this.router.navigate(['main/home']);
         } else {
           alert('failed to login');
@@ -62,7 +63,6 @@ export class AuthenticationPageComponent implements OnInit {
     if (this.authForm.valid) {
       this.accountService.signup(this.authForm.value).subscribe((e: any) => {
         if (e.status == 'success') {
-          console.log('success');
           this.router.navigate(['signup']);
         } else {
           alert('failed to register');

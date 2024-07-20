@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HomecardpostcommunityComponent } from '../../homecardpostcommunity/homecardpostcommunity.component';
-import { HomecardbrowsecomComponent } from '../../homecardbrowsecom/homecardbrowsecom.component';
+import { HomecardpostcommunityComponent } from '../../shared/components/homecardpostcommunity/homecardpostcommunity.component';
+import { HomecardbrowsecomComponent } from '../../shared/components/homecardbrowsecom/homecardbrowsecom.component';
 import { ActivatedRoute } from '@angular/router';
 import { PostserviceService } from '../../shared/services/postservice.service';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
@@ -54,14 +54,12 @@ export class ViewpostComponent implements OnInit {
   getPostsById(uid:number){
     this.postService.getPosts().subscribe((e:any)=>{
       this.posts=e.data.filter((e: { id: number; }) => e.id == uid);
-      console.log(this.posts,"posts");
     })
   }
 
   getComments(postId:number){
     this.postService.getCommentsByPostId(postId).subscribe((e:any)=>{
       this.comments=e.data;
-      console.log(this.comments,"comments");
     })
   }
 

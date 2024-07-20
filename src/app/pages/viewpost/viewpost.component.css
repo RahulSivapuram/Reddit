@@ -99,3 +99,13 @@ h2,h4{
     flex-direction: column;
     gap: 1rem;
 }
+.image-area{
+    margin-top: .5rem;
+    width: 40rem;
+    height: 20rem;
+}
+
+.post-image{
+    width: inherit;
+    height: inherit;
+}

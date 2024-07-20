@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HomecardpostcommunityComponent } from '../../homecardpostcommunity/homecardpostcommunity.component';
-import { HomecardbrowsecomComponent } from '../../homecardbrowsecom/homecardbrowsecom.component';
+import { HomecardpostcommunityComponent } from '../../shared/components/homecardpostcommunity/homecardpostcommunity.component';
+import { HomecardbrowsecomComponent } from '../../shared/components/homecardbrowsecom/homecardbrowsecom.component';
 import {
   FormControl,
   FormGroup,
@@ -58,7 +58,6 @@ export class CreatepostComponent implements OnInit {
   }
 
   post() {
-    console.log(this.postForm.value);
     this.postForm.controls['userId'].setValue(this.loggedInUserId);
     this.postForm.controls['subredditId'].setValue(
       Number(this.postForm.controls['subredditId'].value)

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostComponent } from '../../shared/components/post/post.component';
-import { HomecardpostcommunityComponent } from '../../homecardpostcommunity/homecardpostcommunity.component';
-import { HomecardbrowsecomComponent } from '../../homecardbrowsecom/homecardbrowsecom.component';
+import { HomecardpostcommunityComponent } from '../../shared/components/homecardpostcommunity/homecardpostcommunity.component';
+import { HomecardbrowsecomComponent } from '../../shared/components/homecardbrowsecom/homecardbrowsecom.component';
 import { CommonModule } from '@angular/common';
 import { PostserviceService } from '../../shared/services/postservice.service';
 

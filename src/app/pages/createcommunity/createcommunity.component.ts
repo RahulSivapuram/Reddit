@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { HomecardpostcommunityComponent } from '../../homecardpostcommunity/homecardpostcommunity.component';
-import { HomecardbrowsecomComponent } from '../../homecardbrowsecom/homecardbrowsecom.component';
+import { HomecardpostcommunityComponent } from '../../shared/components/homecardpostcommunity/homecardpostcommunity.component';
+import { HomecardbrowsecomComponent } from '../../shared/components/homecardbrowsecom/homecardbrowsecom.component';
 import { Router, RouterModule } from '@angular/router';
 import { skip } from 'rxjs';
 import {
@@ -39,7 +39,6 @@ export class CreatecommunityComponent {
   }
 
   post() {
-    console.log(this.communityForm.value);
     this.postService
       .addSubReddit(this.communityForm.value)
       .subscribe((e) => {
