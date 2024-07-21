@@ -19,11 +19,18 @@ export class AccountService {
   }
 
   getTokenDetails():any{
-    let res:any= jwtDecode(localStorage.getItem('token')!);
-    return Number(res["Id"]);
+    if (typeof window !== 'undefined') {
+      let res:any= jwtDecode(localStorage.getItem('token')!);
+      return Number(res["Id"]);
+    }
   }
 
   authenticationStatus(){
-    return localStorage.getItem('token')!=null;
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('token')!=null;
+    }
+    else{
+      return false;
+    }
   }
 }

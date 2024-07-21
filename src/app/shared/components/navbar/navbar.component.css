@@ -20,7 +20,6 @@
     background-color: white;
     color: orangered;
     height: 2rem;
-    font-weight: bold;
     width: 5rem;
     border-radius: .2rem;
     cursor: pointer;
@@ -31,11 +30,9 @@
     cursor: pointer;
     border: none;
     height: 2rem;
-    font-weight: bold;
     width: 5rem;
     border-radius: .2rem;
 }
 h2{
     color: white;
-    font-weight: bold;
 }

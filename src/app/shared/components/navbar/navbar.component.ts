@@ -13,7 +13,9 @@ export class NavbarComponent {
   constructor(private router:Router){}
 
   signOut(){
-    localStorage.removeItem("token");
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem("token");
+    }
     this.router.navigate(['']);
   }
 }

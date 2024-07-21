@@ -50,7 +50,9 @@ export class AuthenticationPageComponent implements OnInit {
     if (this.authForm.valid) {
       this.accountService.signin(this.authForm.value).subscribe((e: any) => {
         if (e.status == 'success') {
-          localStorage.setItem('token', e.data[0].userToken);
+          if (typeof window !== 'undefined') {
+            localStorage.setItem('token', e.data[0].userToken);
+          }
           this.router.navigate(['main/home']);
         } else {
           alert('failed to login');

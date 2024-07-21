@@ -20,12 +20,10 @@
 }
 h5{
     color: rgb(248, 66, 0);
-    font-weight: bold;
     font-size: 1rem;
 }
 p{
     color: white;
-    font-weight: bold;
     text-align: center;
     cursor: pointer;
 }
